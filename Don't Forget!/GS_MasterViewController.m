@@ -118,7 +118,15 @@ const int TWENTYFOUR_HOURS_IN_SECS = 86400;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    
+    if(cell==nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+
+    }
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -282,14 +290,24 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Deadline:", @"Deadline"),[self.dateFormatter stringFromDate:taskDeadline]];
         
     
+    /*
+    switch (result)
+    {
+        case NSOrderedAscending: NSLog(@"%@ is in future from %@", taskDeadline, now); break;
+        case NSOrderedDescending:cell.backgroundColor=[UIColor redColor]; cell.textLabel.textColor=[UIColor whiteColor];cell.textLabel.backgroundColor=[UIColor redColor];cell.detailTextLabel.textColor=[UIColor whiteColor];break;
+        case NSOrderedSame: NSLog(@"%@ is the same as %@", taskDeadline, now); break;
+        default: NSLog(@"erorr dates %@, %@", taskDeadline, now); break;
+    }*/
+    
     
     switch (result)
     {
         case NSOrderedAscending: NSLog(@"%@ is in future from %@", taskDeadline, now); break;
-        case NSOrderedDescending:cell.backgroundColor=[UIColor redColor]; cell.textLabel.textColor=[UIColor whiteColor];cell.textLabel.backgroundColor=[UIColor clearColor];cell.detailTextLabel.textColor=[UIColor whiteColor];break;
+        case NSOrderedDescending:cell.detailTextLabel.text =[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"OVERDUE!!!:", @"Overdue"),[self.dateFormatter stringFromDate:taskDeadline]];break;
         case NSOrderedSame: NSLog(@"%@ is the same as %@", taskDeadline, now); break;
         default: NSLog(@"erorr dates %@, %@", taskDeadline, now); break;
     }
+    
 }
 
 @end
