@@ -1,0 +1,24 @@
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "2pz-XF-uhl"; */
+"2pz-XF-uhl.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "379-UK-DpY"; */
+"379-UK-DpY.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "Deadline:"; ObjectID = "9vG-ed-hIi"; */
+"9vG-ed-hIi.text" = "Deadline:";
+
+/* Class = "IBUIViewController"; title = "Detail"; ObjectID = "Ah7-4n-0Wa"; */
+"Ah7-4n-0Wa.title" = "Detail";
+
+/* Class = "IBUILabel"; text = "Name:"; ObjectID = "LQJ-y5-QDv"; */
+"LQJ-y5-QDv.text" = "Name:";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "icE-cT-5n1"; */
+"icE-cT-5n1.normalTitle" = "Button";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "pGg-6v-bdr"; */
+"pGg-6v-bdr.title" = "Master";
+
+/* Class = "IBUINavigationItem"; title = "Don't Forget!"; ObjectID = "tQt-TN-PWz"; */
+"tQt-TN-PWz.title" = "Don't Forget!";
