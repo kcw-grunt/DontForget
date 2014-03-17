@@ -25,6 +25,11 @@
 		555B3B3A18D2131C00EF0580 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B3B1518D2131B00EF0580 /* CoreData.framework */; };
 		555B3B4218D2131C00EF0580 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 555B3B4018D2131C00EF0580 /* InfoPlist.strings */; };
 		555B3B4418D2131C00EF0580 /* Don_t_Forget_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3B4318D2131C00EF0580 /* Don_t_Forget_Tests.m */; };
+		555B3B5118D2144800EF0580 /* Don_t_Forget_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 555B3B2618D2131B00EF0580 /* Don_t_Forget_.xcdatamodeld */; };
+		555B3B5918D2193E00EF0580 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3B5818D2193E00EF0580 /* Task.m */; };
+		555B3B5A18D2193E00EF0580 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3B5818D2193E00EF0580 /* Task.m */; };
+		555B3BAB18D3902F00EF0580 /* TaskCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 555B3BAA18D3902F00EF0580 /* TaskCollection.m */; };
+		5588F30018D59801009F0511 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 5588F2FF18D59801009F0511 /* NSString+MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,13 @@
 		555B3B3F18D2131C00EF0580 /* Don't Forget!Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Don't Forget!Tests-Info.plist"; sourceTree = "<group>"; };
 		555B3B4118D2131C00EF0580 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		555B3B4318D2131C00EF0580 /* Don_t_Forget_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Don_t_Forget_Tests.m; sourceTree = "<group>"; };
+		555B3B5218D214FC00EF0580 /* Don_t_Forget_ 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Don_t_Forget_ 2.xcdatamodel"; sourceTree = "<group>"; };
+		555B3B5718D2193E00EF0580 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = "Don't Forget!/Task.h"; sourceTree = "<group>"; };
+		555B3B5818D2193E00EF0580 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = "Don't Forget!/Task.m"; sourceTree = "<group>"; };
+		555B3BA918D3902F00EF0580 /* TaskCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskCollection.h; path = "Don't Forget!/TaskCollection.h"; sourceTree = "<group>"; };
+		555B3BAA18D3902F00EF0580 /* TaskCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskCollection.m; path = "Don't Forget!/TaskCollection.m"; sourceTree = "<group>"; };
+		5588F2FE18D59801009F0511 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		5588F2FF18D59801009F0511 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,12 @@
 		555B3B0318D2131B00EF0580 = {
 			isa = PBXGroup;
 			children = (
+				555B3BA918D3902F00EF0580 /* TaskCollection.h */,
+				555B3BAA18D3902F00EF0580 /* TaskCollection.m */,
+				555B3B5718D2193E00EF0580 /* Task.h */,
+				555B3B5818D2193E00EF0580 /* Task.m */,
+				5588F2FE18D59801009F0511 /* NSString+MD5.h */,
+				5588F2FF18D59801009F0511 /* NSString+MD5.m */,
 				555B3B1718D2131B00EF0580 /* Don't Forget! */,
 				555B3B3D18D2131C00EF0580 /* Don't Forget!Tests */,
 				555B3B0E18D2131B00EF0580 /* Frameworks */,
@@ -214,6 +232,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Grunt Software";
 				TargetAttributes = {
+					555B3B0B18D2131B00EF0580 = {
+						DevelopmentTeam = 3E73C93UXE;
+					};
 					555B3B3418D2131C00EF0580 = {
 						TestTargetID = 555B3B0B18D2131B00EF0580;
 					};
@@ -264,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555B3B5918D2193E00EF0580 /* Task.m in Sources */,
 				555B3B2B18D2131B00EF0580 /* GS_MasterViewController.m in Sources */,
+				5588F30018D59801009F0511 /* NSString+MD5.m in Sources */,
 				555B3B2218D2131B00EF0580 /* GS_AppDelegate.m in Sources */,
 				555B3B2818D2131B00EF0580 /* Don_t_Forget_.xcdatamodeld in Sources */,
+				555B3BAB18D3902F00EF0580 /* TaskCollection.m in Sources */,
 				555B3B1E18D2131B00EF0580 /* main.m in Sources */,
 				555B3B2E18D2131B00EF0580 /* GS_DetailViewController.m in Sources */,
 			);
@@ -276,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555B3B5A18D2193E00EF0580 /* Task.m in Sources */,
+				555B3B5118D2144800EF0580 /* Don_t_Forget_.xcdatamodeld in Sources */,
 				555B3B4418D2131C00EF0580 /* Don_t_Forget_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,10 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Don't Forget!/Don't Forget!-Prefix.pch";
 				INFOPLIST_FILE = "Don't Forget!/Don't Forget!-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,10 +435,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Don't Forget!/Don't Forget!-Prefix.pch";
 				INFOPLIST_FILE = "Don't Forget!/Don't Forget!-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -473,6 +505,7 @@
 				555B3B4918D2131C00EF0580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		555B3B4A18D2131C00EF0580 /* Build configuration list for PBXNativeTarget "Don't Forget!Tests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +514,7 @@
 				555B3B4C18D2131C00EF0580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -488,6 +522,7 @@
 		555B3B2618D2131B00EF0580 /* Don_t_Forget_.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				555B3B5218D214FC00EF0580 /* Don_t_Forget_ 2.xcdatamodel */,
 				555B3B2718D2131B00EF0580 /* Don_t_Forget_.xcdatamodel */,
 			);
 			currentVersion = 555B3B2718D2131B00EF0580 /* Don_t_Forget_.xcdatamodel */;

@@ -7,10 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Task.h"
 
-@interface GS_DetailViewController : UIViewController
+@interface GS_DetailViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) Task * detailItem;
+
+
+@property (weak, nonatomic) IBOutlet UITextView *detailedInfoView;
+@property (weak, nonatomic) IBOutlet UILabel *deadlineLabel;
+@property (weak, nonatomic) IBOutlet UITextField *deadlineField;
+@property (weak, nonatomic) IBOutlet UITextField *taskNameField;
+@property (weak, nonatomic) IBOutlet UIButton *completionButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+
+
+@property (strong, nonatomic) NSDate *selectedDeadlineDate;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (strong, nonatomic) UIDatePicker *datePicker;
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
+-(IBAction)saveTask:(id)sender;
 @end
+
