@@ -80,10 +80,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-JM-cS7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-JM-cS7">
                                 <rect key="frame" x="20" y="109" width="287" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90217391300000005" green="0.90217391300000005" blue="0.90217391300000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="E1g-DI-Yfx"/>
+                                    <constraint firstAttribute="height" constant="76" id="lnb-sH-hcT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -113,15 +117,19 @@
                                     <action selector="saveTask:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="fL9-PZ-V7c"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQJ-y5-QDv">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQJ-y5-QDv">
                                 <rect key="frame" x="20" y="71" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YW9-dQ-BTG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YW9-dQ-BTG">
                                 <rect key="frame" x="119" y="71" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="89Z-6J-8OK"/>
+                                    <constraint firstAttribute="width" constant="186" id="i9h-IG-AgP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -130,6 +138,17 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LQJ-y5-QDv" firstAttribute="top" secondItem="YW9-dQ-BTG" secondAttribute="top" id="1dH-ME-sdL"/>
+                            <constraint firstItem="LQJ-y5-QDv" firstAttribute="bottom" secondItem="YW9-dQ-BTG" secondAttribute="bottom" id="7FZ-rZ-d3X"/>
+                            <constraint firstItem="PfL-JM-cS7" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="AId-fL-CbU"/>
+                            <constraint firstAttribute="trailing" secondItem="YW9-dQ-BTG" secondAttribute="trailing" constant="15" id="Aim-OV-uQ9"/>
+                            <constraint firstItem="LQJ-y5-QDv" firstAttribute="leading" secondItem="PfL-JM-cS7" secondAttribute="leading" id="aDE-WA-fvY"/>
+                            <constraint firstItem="YW9-dQ-BTG" firstAttribute="leading" secondItem="LQJ-y5-QDv" secondAttribute="trailing" constant="8" symbolic="YES" id="aea-dq-T7S"/>
+                            <constraint firstAttribute="trailing" secondItem="PfL-JM-cS7" secondAttribute="trailing" constant="13" id="eyZ-e6-yne"/>
+                            <constraint firstItem="YW9-dQ-BTG" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="top" constant="71" id="ffE-r0-VZA"/>
+                            <constraint firstItem="PfL-JM-cS7" firstAttribute="top" secondItem="LQJ-y5-QDv" secondAttribute="bottom" constant="8" symbolic="YES" id="jIa-5A-lCF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cra-N8-TIN"/>
                     <connections>
