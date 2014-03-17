@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553DC9E118D7C1AE00857E96 /* flame39.png in Resources */ = {isa = PBXBuildFile; fileRef = 553DC9E018D7C1AE00857E96 /* flame39.png */; };
+		553DC9E318D7C1B600857E96 /* noflame39.png in Resources */ = {isa = PBXBuildFile; fileRef = 553DC9E218D7C1B600857E96 /* noflame39.png */; };
 		555B3B1018D2131B00EF0580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B3B0F18D2131B00EF0580 /* Foundation.framework */; };
 		555B3B1218D2131B00EF0580 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B3B1118D2131B00EF0580 /* CoreGraphics.framework */; };
 		555B3B1418D2131B00EF0580 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555B3B1318D2131B00EF0580 /* UIKit.framework */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		553DC9E018D7C1AE00857E96 /* flame39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flame39.png; path = "../../Don't Forget!/flame39.png"; sourceTree = "<group>"; };
+		553DC9E218D7C1B600857E96 /* noflame39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noflame39.png; path = "../../Don't Forget!/noflame39.png"; sourceTree = "<group>"; };
 		555B3B0C18D2131B00EF0580 /* Don't Forget!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't Forget!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		555B3B0F18D2131B00EF0580 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		555B3B1118D2131B00EF0580 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		553DC9E418D7C1BC00857E96 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				553DC9E018D7C1AE00857E96 /* flame39.png */,
+				553DC9E218D7C1B600857E96 /* noflame39.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		555B3B0318D2131B00EF0580 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		555B3B1718D2131B00EF0580 /* Don't Forget! */ = {
 			isa = PBXGroup;
 			children = (
+				553DC9E418D7C1BC00857E96 /* images */,
 				555B3B2018D2131B00EF0580 /* GS_AppDelegate.h */,
 				555B3B2118D2131B00EF0580 /* GS_AppDelegate.m */,
 				555B3B2318D2131B00EF0580 /* Main.storyboard */,
@@ -258,6 +272,8 @@
 				555B3B3018D2131B00EF0580 /* Images.xcassets in Resources */,
 				555B3B1C18D2131B00EF0580 /* InfoPlist.strings in Resources */,
 				555B3B2518D2131B00EF0580 /* Main.storyboard in Resources */,
+				553DC9E118D7C1AE00857E96 /* flame39.png in Resources */,
+				553DC9E318D7C1B600857E96 /* noflame39.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

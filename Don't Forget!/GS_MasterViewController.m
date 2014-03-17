@@ -118,7 +118,7 @@ const int TWENTYFOUR_HOURS_IN_SECS = 86400;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"TaskCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
@@ -280,15 +280,42 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Task *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    UILabel *label;
+    UIImageView *imageView;
     
     ///Set formatting of cell for overdue tasks
     NSDate * now = [NSDate date];
     NSDate * taskDeadline = task.deadline;
     NSComparisonResult result = [now compare:taskDeadline];
     
-    cell.textLabel.text = task.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Deadline:", @"Deadline"),[self.dateFormatter stringFromDate:taskDeadline]];
-        
+    label = (UILabel *)[cell viewWithTag:100];
+    label.text = task.name;
+    
+    label = (UILabel *)[cell viewWithTag:200];
+    
+    imageView = (UIImageView *)[cell viewWithTag:300];
+
+    switch (result)
+    {
+        case NSOrderedAscending:
+            NSLog(@"%@ is in future from %@. Do Little", taskDeadline, now);
+            label.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Deadline:", @"Deadline"),[self.dateFormatter stringFromDate:taskDeadline]];
+            imageView.image = [UIImage imageNamed:@"noflame39"];
+            break;
+        case NSOrderedDescending:
+            label.text =[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"OVERDUE!!!:", @"Overdue"),[self.dateFormatter stringFromDate:taskDeadline]];
+            imageView.image = [UIImage imageNamed:@"flame39"];
+            break;
+        case NSOrderedSame:
+            NSLog(@"%@ is the same as %@ . Do nothing.", taskDeadline, now);
+            break;
+        default: NSLog(@"erorr dates %@, %@", taskDeadline, now); break;
+    }
+
+    
+    
+
+    
     
     /*
     switch (result)
@@ -300,13 +327,6 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     }*/
     
     
-    switch (result)
-    {
-        case NSOrderedAscending: NSLog(@"%@ is in future from %@", taskDeadline, now); break;
-        case NSOrderedDescending:cell.detailTextLabel.text =[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"OVERDUE!!!:", @"Overdue"),[self.dateFormatter stringFromDate:taskDeadline]];break;
-        case NSOrderedSame: NSLog(@"%@ is the same as %@", taskDeadline, now); break;
-        default: NSLog(@"erorr dates %@, %@", taskDeadline, now); break;
-    }
     
 }
 
