@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "Task.h"
 
-@interface GS_DetailViewController : UIViewController <UITextFieldDelegate>
+@interface GS_DetailViewController : UIViewController <UITextFieldDelegate,UITextViewDelegate>
 
 
 @property (strong, nonatomic) Task * detailItem;

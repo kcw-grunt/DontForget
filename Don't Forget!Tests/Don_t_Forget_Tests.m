@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Task.h"
 
 @interface Don_t_Forget_Tests : XCTestCase
 
@@ -17,18 +18,45 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+-(void)testForceTrue{
+    XCTAssertTrue(2+2==4);
 }
+-(void)testForceFalse{
+    XCTAssertFalse(200+3==4);
+}
+
+-(void)testTaskProperties{
+
+    Task *testTask;
+    
+    ///Copied df format from imp from app
+    NSDateFormatter *testDf = [[NSDateFormatter alloc] init];
+    [testDf  setDateFormat:@"MMM d, YYYY"];
+    [testDf setLocale:[NSLocale currentLocale]];
+    [testDf setTimeZone:[NSTimeZone systemTimeZone]];
+
+    
+    ///Corner case task
+    testTask.name = @"myTaskawrgv";////Random string for task name
+    testTask.timeStamp = [NSDate date];
+    testTask.detailedInfo = @"dfwwfwfwefcatwc3t3dergewlwcmiyu;gdfgegeegrrrr rgrrgrgrgrg";
+    testTask.deadline = [NSDate dateWithTimeIntervalSince1970:-16000000];
+    testTask.taskOrder = [NSNumber numberWithInt:895599555];///Very large index
+    
+    XCTAssertTrue(testTask.name.length < 100);
+    XCTAssertTrue(testTask.detailedInfo.length < 240);
+    XCTAssertTrue(testTask.taskOrder >= 0);
+}
+
+
+
+
 
 @end

@@ -121,6 +121,15 @@ _deadlineField.text = [NSString stringWithFormat:@"%@",[self.dateFormatter strin
 }
 
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
+    
+
+
 -(IBAction)saveTask:(id)sender{
  
     
