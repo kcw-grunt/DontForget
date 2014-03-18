@@ -89,6 +89,15 @@
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     
+    
+    
+    //Get version number
+    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSString  * version = [infoDict objectForKey:@"CFBundleShortVersionString"];
+    NSString * appName = [infoDict objectForKey:@"CFBundleName"];
+    _versionLabel.text =[NSString stringWithFormat:@"%@ v%@",appName,version];
+    
+    //Init the selected date
     selectedDeadlineDate = [[NSDate alloc] init];
 
     

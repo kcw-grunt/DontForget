@@ -139,13 +139,25 @@
                                     <outlet property="delegate" destination="Ah7-4n-0Wa" id="29Q-a9-My6"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJC-Ji-msQ">
+                                <rect key="frame" x="20" y="527" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1tp-1n-OJH"/>
+                                    <constraint firstAttribute="height" constant="21" id="c7U-dG-X99"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LQJ-y5-QDv" firstAttribute="top" secondItem="YW9-dQ-BTG" secondAttribute="top" id="1dH-ME-sdL"/>
+                            <constraint firstAttribute="bottom" secondItem="vJC-Ji-msQ" secondAttribute="bottom" constant="20" id="5UP-pf-iSb"/>
                             <constraint firstItem="LQJ-y5-QDv" firstAttribute="bottom" secondItem="YW9-dQ-BTG" secondAttribute="bottom" id="7FZ-rZ-d3X"/>
                             <constraint firstItem="PfL-JM-cS7" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="AId-fL-CbU"/>
                             <constraint firstAttribute="trailing" secondItem="YW9-dQ-BTG" secondAttribute="trailing" constant="15" id="Aim-OV-uQ9"/>
+                            <constraint firstItem="vJC-Ji-msQ" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="JEe-xJ-Hd6"/>
                             <constraint firstItem="LQJ-y5-QDv" firstAttribute="leading" secondItem="PfL-JM-cS7" secondAttribute="leading" id="aDE-WA-fvY"/>
                             <constraint firstItem="YW9-dQ-BTG" firstAttribute="leading" secondItem="LQJ-y5-QDv" secondAttribute="trailing" constant="8" symbolic="YES" id="aea-dq-T7S"/>
                             <constraint firstAttribute="trailing" secondItem="PfL-JM-cS7" secondAttribute="trailing" constant="13" id="eyZ-e6-yne"/>
@@ -161,6 +173,7 @@
                         <outlet property="detailedInfoView" destination="PfL-JM-cS7" id="mHN-2m-rF6"/>
                         <outlet property="nameLabel" destination="LQJ-y5-QDv" id="YY1-tT-Fc5"/>
                         <outlet property="taskNameField" destination="YW9-dQ-BTG" id="dEi-mg-ngj"/>
+                        <outlet property="versionLabel" destination="vJC-Ji-msQ" id="xeZ-Id-pOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>

@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *completionButton;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 
 @property (strong, nonatomic) NSDate *selectedDeadlineDate;
