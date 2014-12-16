@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
 #import "Task.h"
 
 @interface GS_DetailViewController : UIViewController <UITextFieldDelegate,UITextViewDelegate>

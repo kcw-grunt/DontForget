@@ -42,6 +42,13 @@ const int TWENTYFOUR_HOURS_IN_SECS = 86400;
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter  setDateFormat:@"MMM d, YYYY"];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,17 +58,6 @@ const int TWENTYFOUR_HOURS_IN_SECS = 86400;
 }
 
 
-#pragma mark Date Formatter Methods
-- (NSDateFormatter *)dateFormatter{
-    if (dateFormatter == nil) {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter  setDateFormat:@"MMM d, YYYY"];
-        [dateFormatter setLocale:[NSLocale currentLocale]];
-        [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-        
-    }
-    return dateFormatter;
-}
 
 
 - (void)insertNewObject:(id)sender
